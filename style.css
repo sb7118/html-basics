@@ -1,0 +1,17 @@
+h1{
+    color: white;
+    background-color: black;
+    padding-left: 400px;
+    border-radius: 20px 5px ;
+}
+.blue{
+    color:white;
+    background-color: black;
+}
+#red{
+    color:red;
+}
+section{
+    color:blue;
+    align-items: center;
+}
