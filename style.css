@@ -6,12 +6,20 @@ h1{
 }
 .blue{
     color:rgb(13, 131, 160);
-    background-color: black;
 }
 #red{
     color:red;
 }
-section{
+.info{border:2px solid black;
     color:blue;
-    align-items: center;
+    padding-left: 100px;
+    background-color: black;
+}
+nav{
+    background-color: black;
+    color: white;
+}
+.xyz{
+    color: brown;
+    padding-left: 400px;
 }

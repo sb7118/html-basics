@@ -1,6 +1,6 @@
 let element = document;
 function myFunc(){
-    element.getElementById("para").innerHTML="<b> hello world </b>";
+    element.getElementById("para").innerHTML="<b> pikachu?? </b>";
 }
 console.log(myFunc());
 
