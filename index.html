@@ -7,7 +7,9 @@
      
     </head>
     <body bgcolor="green">
-        <h1>&quot;welcome&nbsp;to&nbsp;sign&nbsp;page&quot;</h1>
+        <header>
+            <h1>&quot;welcome&nbsp;to&nbsp;sign&nbsp;up&nbsp;page&quot;</h1>
+        </header>
         <nav>
             <a href="/">Back to Home</a>
             <a href="info.html">my info</a>
@@ -32,12 +34,21 @@
                 </section>
                 <section>
                     NAME :<input type="text" placeholder="name"><br><br>
-                    EMAIL :<input type="mailto"><br><br>
+                    EMAIL :<input type="mailto" placeholder="@gmail.com"><br><br>
                     PASSWORD :<input type="password"><br><br>
                 </section>
             </div>
-            <button type="submit">Submit</button> <br><br>
         </form>
+        <form action="SAMPLE.html">
+            <div class="submit">
+                <button type="submit" id="submit" onclick="myFunc()">Submit</button> <br><br>
+            </div>
+            <script>
+                myFunc = () => {
+                    alert("your data has been submitted");
+                }
+            </script>
+            </form>
         <footer> <i>copyright</i> &copy; 2006</footer>
         
     </body>
