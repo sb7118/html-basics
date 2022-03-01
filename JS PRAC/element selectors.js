@@ -7,7 +7,7 @@ let element = document.getElementById("1");
 // element=element.styleSheets.color="red";
 element.style.color="red";
 element.innerText="i am a good boy";
-//i can use htlm tag inside inner.html
+//i can use html tag inside inner.html
 element.innerHTML="<i>i am a good boy</i>";
 console.log(element);
 
