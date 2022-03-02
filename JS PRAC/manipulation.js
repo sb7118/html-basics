@@ -18,7 +18,10 @@ let qwe = document.querySelector(".parent");
 qwe.appendChild(element);//appends element after div.parent
  console.log(element);
 
-//REPLACEMEN & REMOVEing
+ //REMOVING
+qwe.removeChild(element);//removing child form div.parent
+
+//REPLACEMEN 
 let qwerty = document.createElement("h1");
 qwerty.className="h1";
 qwerty.id = "h2";
@@ -26,12 +29,16 @@ qwerty.id = "h2";
 let tnode = document.createTextNode("this was the replaced element");
 qwerty.appendChild(tnode);
 
+
  element.replaceWith(qwerty);//replacing element with qwerty
 
- let parent = document.getElementById("parent");
+
+ //replacement of child in parent with element
+ let parent = document.getElementById("parent");//selecting a parent id which contains child
  parent.replaceChild(element,document.getElementById("1"));
- 
 
-
-
+let ch = element.getAttribute("id");
+console.log(element , ch);
+ch = element.hasAttribute("id");
+console.log(element , ch);
 
