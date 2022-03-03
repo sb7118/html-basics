@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>practice</title>
+      
+        <link  rel="stylesheet" href="style.css">
+     
+    </head>
+    <body bgcolor="green" id="body">
+        <header>
+            <h1 id="gold" contenteditable="true" >&quot;welcome&nbsp;to&nbsp;sign&nbsp;up&nbsp;page&quot;</h1>
+        </header>
+        <nav>
+            <!-- <a href="/">Back to Home</a> -->
+            <a href="index.html">HOME </a>
+            <a href="info.html">my info</a>
+        </nav>
+        <div class="btn">
+         <button id="btn" class="btn" onclick="color()"> change bgcolor</button>
+        </div>
+        <div id="suggestion"><p id="red">&lt;please sign in correct information&gt;</p></div>
+        <div class="blue"n id="blue">
+            <p id="para" class="pikachu">
+                 this is inside div
+            </p>
+        </div>
+        <script src="prac.js"></script>
+        <div id="img">
+            <img src="https://www.giantbomb.com/a/uploads/scale_medium/0/6087/2437349-pikachu.png" alt="image" height="350px" width="300px">
+        </div>
+        
+        <form action="abc" method="get">
+            <div class="info">
+                <section>
+                    <b>GENDER</b><br><br>
+                    MALE :<input type="radio" name="gender"><br><br>
+                    FEMALE :<input type="radio" name="gender"><br><br>
+                </section>
+                <section>
+                    NAME :<input type="text" placeholder="name"><br><br>
+                    EMAIL :<input type="mailto" placeholder="@gmail.com"><br><br>
+                    PASSWORD :<input type="password"><br><br>
+                </section>
+            </div>
+        </form>
+        <form action="SAMPLE.html">
+            <div class="submit">
+                <button type="submit" id="submit" onclick="myFunc" >Submit</button> <br><br>
+            </div>
+            <script>
+                let elem2 = document.getElementById("body");
+
+                function color(){
+                    color = "blue";
+                    elem2.style.backgroundColor = color;
+             }
+            </script>
+            </form>
+        <footer> <i>copyright</i> &copy; 2006</footer>
+        
+    </body>
+</html>
