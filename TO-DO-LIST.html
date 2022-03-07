@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list </title>
+    <style>
+        body{
+            background-color:grey;
+        }
+        #input{
+            padding:5px;
+        }
+        #button{
+            padding:7px;
+        }
+        #list{
+            background-color: aquamarine;
+            font-family:Arial, Helvetica, sans-serif;
+            width:fit-content;
+        }
+        p{
+            font-size: large;
+            font-weight: bolder;
+            text-shadow: 2px 2px 4px white;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>TO DO LISTS</h2>
+    <div id="list">
+        <input type="text" id="input" placeholder="try something else"><button id="button">+</button>
+        <div id="container">
+
+        </div>
+    </div>
+    <script>
+        let container = document.getElementById("container");
+        let input = document.getElementById("input");
+        let button = document.getElementById("button").addEventListener("click",function(){
+            let items = document.createElement("p");
+            items.innerHTML= input.value;
+            container.appendChild(items);
+            input.value = "";
+
+            //for completd lists
+            items.addEventListener("click" , function(){
+                items.style.textDecoration = "line-through";
+            });
+
+            //for removing through double click
+            items.addEventListener("dblclick" , function(){
+                container.removeChild(items);
+            });
+
+        });
+
+    </script>
+</body>
+</html>
