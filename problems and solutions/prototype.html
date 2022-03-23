@@ -1,0 +1,26 @@
+<!-- write a program to make an object literals named info to get information from the user -->
+<html>
+
+<head>
+    <title>prototype</title>
+</head>
+
+<body>
+    <script>
+        function info(name, age, hobby, favLanguage) {
+            this.name = name;
+            this.age = age;
+            this.hobby = hobby;
+            this.favLang = favLanguage;
+        }
+
+        info.prototype.slogan = function () {
+            return `my name is ${this.name} . im ${this.age} years old. my hobby is ${this.hobby} and my favourate language is ${this.favLang} `;
+        }
+
+        let user1 = new info("sujan", 16 ,"programming" , "javaScript");
+        console.log(user1);
+    </script> 
+</body>
+
+</html>

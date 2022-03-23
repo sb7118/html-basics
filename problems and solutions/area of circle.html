@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area of circle</title>
+</head>
+<body>
+    <h1>area of circle calculator</h1>
+    <div id="container">
+        <input type="number" id="input" placeholder="enter radius"><button id="button">+</button>
+    </div>
+ <script>
+let input = document.getElementById("input");
+let button = document.getElementById("button");
+let container = document.getElementById("container");
+
+button.addEventListener('click' ,function area(){
+    let para = document.createElement('p');
+    let area = input.value*22/7;
+    para.innerHTML = area;
+    input.value = "";
+    container.appendChild(para);
+});
+
+
+
+
+</script>   
+</body>
+</html>
