@@ -11,7 +11,16 @@ let y = 200;
 let radius = 50;
 let dx = 2;
 let dy =2;
-
+var mouse = {
+    x:undefined,
+    y:undefined
+}
+//interacting with circles
+window.addEventListener('mousemove', function(event){
+    mouse.x = event.x;
+    mouse.y = event.y;
+    console.log(mouse);
+})
 
 //creating an object
 function Circle(x,y,dx,dy,radius){
