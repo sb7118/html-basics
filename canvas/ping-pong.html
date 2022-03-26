@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping-Pong</title>
+    <style>
+        #div{
+            background-color:rgb(65, 42, 42);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <canvas id="canvas" height="600" width="400"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const context = canvas.getContext('2d');
+
+        //paddle
+        const paddleWidth = 50;
+        const paddleHeight = 10;
+
+
+        
+
+        const width = 400;
+        const height = 600;
+
+        //rectangle
+        context.fillStyle = "blue";
+        context.fillRect(0,0,width ,height);
+
+         //creating paddle top
+        context.fillStyle="white";
+        context.fillRect(175, 10 ,paddleWidth ,paddleHeight)
+        // creating paddle bttom
+        context.fillStyle="white";
+        context.fillRect(175, 580 ,paddleWidth ,paddleHeight)
+
+        //center line
+
+        context.beginPath();
+        context.setLineDash([6]);//in px
+        context.moveTo(0,300);
+        context.lineTo(width,height/2);
+        context.strokeStyle= "white";
+        context.stroke()
+
+        //create a ball
+        context.beginPath();
+        context.arc(width/2,height/2, 10 ,2*Math.PI ,false);
+        context.fillStyle = "white";
+        context.fill();
+
+        //players score
+        context.font = "32px Josefin Sans";
+        context.fillText(10,20,height / 2-30);
+        context.fillText(10,20,height / 2+50);
+    </script>
+</body>
+</html>

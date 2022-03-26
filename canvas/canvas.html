@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+    <style>
+        #canvas {
+            /* background-color: #3e3e3e;*/
+            border: 1px solid black;
+
+        }
+
+        #div1 {
+            text-align: center;
+        }
+
+        body {
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <canvas id="canvas" height="600" width="900"></canvas>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        const context = canvas.getContext('2d');
+        const context1 = canvas.getContext('2d');
+
+
+
+        const height = 600;
+        const width = 900;
+
+        // line 1
+        //its origin 0,0 is top-left-hand-side
+        context.moveTo(450, 0);//moves to origin
+        context.lineTo(450, 900);//creats a path 
+        context.stroke();//draws the line
+
+        // line 2
+        context.moveTo(0, 300);
+        context.lineTo(900, 300);
+        context.stroke();
+
+        //circle
+        context.beginPath();
+        // arc(x , y , radius , startAngle , endAngle , anti-clock wise (optional))
+        context.arc(canvas.width / 2, canvas.height / 2, 50, 0, 2 * Math.PI, false);
+        context.lineWidth = "2";
+        context.fillStyle = "gold";
+        context.fill();
+        context.stroke();
+
+        //rectangle
+        context.beginPath();
+
+        // rect(x , y , width , height)
+        context.rect(80, 90, 70, 40);
+        //colors 
+        context.fillStyle = "green";
+        context.fill();
+
+        // for stroke (outer line)
+
+        context.strokeStyle = "red";
+        context.stroke();
+
+
+        //creating circles through for loops
+        const colors  = ["red" , 'yellow ' ,'green'];
+        for (let i = 0; i < 3; i++) {
+
+            let x = Math.random() * width;
+            let y = Math.random() * height;
+
+            context1.beginPath();
+            context1.arc(x, y, 50, 0, 2 * Math.PI, false);
+            context1.fillStyle = colors[i];
+            context1.fill();
+            context1.stroke();
+
+        }
+
+
+    </script>
+</body>
+
+</html>
