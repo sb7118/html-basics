@@ -22,6 +22,12 @@ window.addEventListener('mousemove', function(event){
     console.log(mouse);
 })
 
+//resizing
+window.addEventListener('resize' , function(){
+    canvas.width = window.innerWidth;
+    anvas.height = window.innerHeight;
+})
+
 //creating an object
 function Circle(x,y,dx,dy,radius){
     this.x = x;
@@ -35,6 +41,8 @@ function Circle(x,y,dx,dy,radius){
         context.beginPath();
         context.arc(this.x ,this.y ,this.radius ,0 ,2*Math.PI ,false);
         context.lineWidth = 2;
+        context.fillStyle = "white";
+        context.fill();
         context.stroke();
     }
 
@@ -50,12 +58,24 @@ function Circle(x,y,dx,dy,radius){
         }
         this.x+=this.dx;
         this.y+=this.dy;
+
+        //interactivity
+        if(mouse.x - this.x< 50 && mouse.x - this.x > -50
+            && mouse.y-this.y < 50 && mouse.y-this.y>-50){
+            if(this.radius < 40){
+                this.radius +=1;
+            }
+           
+        }else if(this.radius > 0){
+            this.radius -= 1;
+        }
+
         this.draw();
     }
 }
 
 let circleArray = [];
-for(let x = 0; x<100 ; x++){
+for(let x = 0; x<300 ; x++){
     let x = Math.random()* canvas.width;
     let y = Math.random()* canvas.height;
     let dx = (Math.random()-0.5)*2;
@@ -63,7 +83,7 @@ for(let x = 0; x<100 ; x++){
     circleArray.push(new Circle(x,y , dx ,dy , radius));
 
 }
-let circle = new Circle(300, 300, 2, 2, 50);
+// let circle = new Circle(300, 300, 2, 2, 50);
 
 function animate(){
 
