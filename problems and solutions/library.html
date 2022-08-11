@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>library</title>
+    </head>
+    <body>
+        <script>
+            //create a class name library which contains following:
+            /* 
+             getBookList()
+             issueBook(bookname,user)
+             returnBook(bookname)
+            */
+
+            class library{
+                constructor(bookList=["alchemist","richest man in babylon","as a man thinketh"]){
+                    this.bookList = bookList;
+
+                }
+
+                getBookList(){
+                    return `here is the book lists '${this.bookList}'`;
+                }
+
+                issueBook(bookName , user){
+                    this.bookName = bookName;
+                    this.user = user;
+                    return `the book ${this.bookName} is issued to ${this.user} `;
+                }
+                
+                returnbook(bookName){
+                    return ` the book ${this.bookName} is returned `;
+                }
+            }
+            user1 = new library(this.bookList);
+            console.log(user1);
+            console.log(user1.getBookList());
+            console.log(user1.issueBook( "alchemist", "sujan"));
+            console.log(user1.returnbook("alchemist"));
+
+        </script>
+    </body>
+</html>

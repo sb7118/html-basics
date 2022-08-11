@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,4 +49,56 @@
     </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+    <style>
+      input{
+        height: 30px;
+      }
+      #btn{
+        height: 30px;
+       
+      }
+    </style>
+</head>
+
+<body>
+  <h1>palindrome checker</h1>
+  <input id="input" type="text"></input>
+  <button id="btn">check</button>
+  <div id="div"></div>
+    <script>
+      let input = document.getElementById("input");
+      let button = document.getElementById("btn");
+      let txtInput;
+
+      button.addEventListener("click" , () => {
+        let revInput = txtInput.split("").reverse().join("")
+        console.log(revInput);
+        let message = document.createElement("p");
+        let div = document.getElementById("div");
+        div.appendChild(message);
+        if(txtInput===revInput){
+          message.innerHTML = "palindrome";
+        }else{
+          message.innerHTML = "not palindrome";
+        }
+      })
+
+      input.addEventListener("keyup" , () =>{
+        txtInput = input.value;
+      })
+
+
+
+    </script>
+
+</body>
+>>>>>>> a3b69419bd48fca37e1f366c921a2e0cfa2c560a
 </html>
