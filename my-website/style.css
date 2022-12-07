@@ -1,0 +1,18 @@
+body{
+    color: aliceblue;
+    background-color: black;
+    font-family: sans-serif;
+    /* font-weight: 100; */
+    /* font: optional; */
+}
+
+#nav :hover{
+    color: aliceblue;
+    background-color:black;
+}
+
+h1{
+    position: absolute;
+    margin-left: 50%;
+    /* margin-right: 50%; */
+}
