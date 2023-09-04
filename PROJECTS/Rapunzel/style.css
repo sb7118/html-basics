@@ -1,0 +1,77 @@
+/* index.html */
+body{
+    background-color: rgb(154, 38, 196);
+    font-family: cursive;
+}
+
+#Rapunzel_pfp{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    display: block;
+}
+
+#Introduction{
+    border: 2px solid white;
+    /* margin-left: 45%; */
+    display: block;
+    position: fixed;
+    max-width: fit-content;
+    top: 70px;
+    /* right: 0; */
+    left: 310px;
+    background-color: rgb(96, 41, 198);
+    border-radius: 0px 25px 25px 25px;
+}
+
+#intro{
+    color: aliceblue;
+    margin: auto;
+    text-align: center;
+}
+
+#text{
+    color: aliceblue;
+    font-size: larger;
+}
+#navigator{
+    border: 2px solid white;
+    padding: 5px;
+}
+
+
+#pics{
+    /* padding: 10px; */
+    text-decoration: none;
+    color: rgb(156, 199, 237);
+    /* background-color: grey; */
+    /* margin: 5px; */
+}
+#gallery{
+    /* margin: 10px; */
+    padding-bottom: 10px;
+    padding-top: 7px ;
+    border: 2px solid black;
+}
+
+#pics:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(176, 63, 218);
+}
+
+/* pics.html */
+#pics-body{
+    color: aliceblue;
+    font-family:sans-serif;
+}
+
+#images{
+    background-color: rgb(196, 125, 209);
+    border-radius: 20px;
+    overflow: auto;
+}
+
+img{
+    border-radius: 20px;
+    position: relative;
+}
