@@ -1,22 +1,32 @@
-console.log("hello world!");
-//always initialize the arrow function first
-let open_facebook=  () =>  {
-    window.open("https://facebook.com/sujan.baskota.3348/");
-}
-let open_instagram = () => {
-    window.open("https://www.instagram.com/sujan_096/");
-}
-let open_pinterest= () => {
-    window.open("https://www.pinterest.com/pixure_71118/");
-}
-let open_anime= () => {
-    window.open("https://www.zoro.to/");
-}
-let open_gitHub= () => {
-    window.open("https://www.github.com/sb7118/")
-}
-document.getElementById("facebook").addEventListener("click",open_facebook);
-document.getElementById("instagram").addEventListener("click",open_instagram);
-document.getElementById("pinterest").addEventListener("click",open_pinterest);
-document.getElementById("anime").addEventListener("click",open_anime);
-document.getElementById("github").addEventListener("click",open_gitHub);
+// import LocomotiveScroll from 'locomotive-scroll';
+
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('#main'),
+//     smooth: true
+// });
+
+// let a = document.querySelector(".elem");
+// console.log(a.getAttribute("data-image"));
+
+console.log("hello?")
+let elemC = document.getElementById("elem-container");
+let fixedImage = document.getElementById("fixed-image");
+elemC.addEventListener("mouseenter",()=>{
+    // alert("finally");
+    fixedImage.style.display = "block";
+})
+elemC.addEventListener("mouseleave",()=>{
+    // alert("finally");
+    fixedImage.style.display = "none";
+})
+
+
+let elems = document.querySelectorAll(".elem");
+elems.forEach(function(e){
+    // console.log(e.getAttribute("id"));
+    e.addEventListener("mouseenter",()=>{
+        let image = e.getAttribute("data-image");
+        fixedImage.style.backgroundImage = `url(${image})`
+    })
+
+})
